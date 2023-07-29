@@ -1,0 +1,21 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a:active {
+  background-color: blue; /* Change this to the desired color */
+}
+.heart{
+  border-color: red;
+
+}
+.heart .hover-red{
+  fill: transparent;
+  stroke: #e10d0d;
+  transition: all 0.2s;
+}
+.heart:hover .hover-red{
+  fill: #e10d0d;
+  stroke: #e10d0d;
+}

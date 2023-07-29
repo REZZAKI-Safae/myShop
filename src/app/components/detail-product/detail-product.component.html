@@ -1,0 +1,33 @@
+<ngb-carousel *ngIf="product?.images">
+	<ng-template ngbSlide *ngFor="let img of product?.images">
+		<div class="picsum-img-wrapper bg-info mt-3">
+			<img [src]="img" alt="Random first slide" style="height: 350px; width: 400px;"/>
+		</div>
+		<div class="carousel-caption"style="text-align: right;">
+			<h3 class="text-black" >{{product.title}}</h3>
+      <p class="text-black">
+        <style>
+            .checked {
+          color: orange;
+        }
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        {{product.rating}}
+      </p>
+			<p class="text-black">{{product.description}}</p>
+      <p class="text-black">{{product.price}}$</p>
+      <div >
+        <button class="btn btn-warning "(click)="addtocard()" >add to card</button>
+
+      </div>
+		</div>
+	</ng-template>
+</ngb-carousel>
+
+

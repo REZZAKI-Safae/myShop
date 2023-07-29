@@ -1,0 +1,45 @@
+<main class="m-2">
+  <table class="table mb-3" >
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Image</th>
+        <th scope="col">Produit</th>
+        <th scope="col">Quantite</th>
+        <th></th>
+        <th scope="col">Prix</th>
+      </tr>
+    </thead>
+  <tbody>
+    <tr *ngFor="let pan of this.addS.panier;let i=index">
+      <td>{{i+1}}</td>
+      <td>
+        <img src="{{pan.item.thumbnail}}" width="50px" height="50px" alt="{{pan.item.title}}">
+      </td>
+      <th scope="row" >
+        <div class="">
+          <span>{{pan.item.title}}</span>
+        </div>
+      </th>
+      <td>
+        <div class="d-flex justify-content-between">
+          <button class="btn btn-danger" (click)="substractQuantite(pan)">-</button>
+          <span>{{pan.quantity}}</span>
+          <button class="btn btn-success" (click)="addtocard(pan)">+</button>
+        </div></td>
+        <td></td>
+      <td>{{pan.price|currency}}</td>
+      <td><button class="btn btn-danger" (click)="remove(pan)">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="25" height="25" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><g id="_01_align_center" data-name="01 align center"><path d="M22,4H17V2a2,2,0,0,0-2-2H9A2,2,0,0,0,7,2V4H2V6H4V21a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3V6h2ZM9,2h6V4H9Zm9,19a1,1,0,0,1-1,1H7a1,1,0,0,1-1-1V6H18Z" fill="#ededed" data-original="#000000"></path><rect x="9" y="10" width="2" height="8" fill="#ededed" data-original="#000000"></rect><rect x="13" y="10" width="2" height="8" fill="#ededed" data-original="#000000"></rect></g></g></svg>Remove</button></td>
+      </tr>
+  </tbody>
+  <tfoot>
+    <th scope="col" style="font-size: 25px;">
+      Total
+    </th>
+    <td></td><td></td><td></td><td></td>
+    <td style="font-size: 25px;">{{this.addS.total|currency}}</td>
+  </tfoot>
+</table>
+<button class="btn btn-primary" (click)="authentifier()">Confirmer commande </button>
+</main>

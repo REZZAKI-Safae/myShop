@@ -1,0 +1,49 @@
+
+<!-- On fait appel a la directive ngFor-->
+<form class="d-flex justify-content-center mt-2" role="search">
+  <input type="search" placeholder="search here" ngModel #search="ngModel" (keyup)="searchProduct(search.value)" [ngModelOptions]="{standalone: true}">
+  <div class="combobox ms-2">
+    <select #selectList (change)="filterProductCategory(selectList.value)" class="text-black">
+      <option>Category...</option>
+      <option *ngFor="let element of categories" [value]="element" class="text-black">{{element}}</option>
+    </select>
+    </div>
+    <style>
+      :root {--PANTONECOATED: #5075d0;}
+    select {
+      color: black;
+      box-shadow: none;
+      flex: 1;  padding: 0 1.2em;  color: #fff;
+      background-color: var(--PANTONECOATED);
+      cursor: pointer;}
+
+    .combobox {
+      position: relative;
+      display: flex;  width: 20em;  height: 3em;
+      border-radius: .25em;  overflow: hidden;
+      }
+
+    .combobox::after {
+      content: '\25BC';  position: absolute;
+      top: 0;  right: 0;  padding: 1em;
+      background-color: #b567c5;
+      transition: .25s all ease;
+      pointer-events: none;}
+
+    .combobox:hover::after {
+      color: #f39c12;
+    }
+
+    </style>
+</form>
+<div class="row m-2 row-cols-1 row-cols-md-2 row-cols-lg-3 g-2 g-lg-3">
+        <app-product-item *ngFor="let item of products" [product]="item" style="width: fit-content;"></app-product-item>
+    </div>
+
+
+
+
+
+
+
+

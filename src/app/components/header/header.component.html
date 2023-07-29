@@ -1,0 +1,120 @@
+
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" >Safy</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link"routerLink="/produits" routerLinkActive="router-link-active" >Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"routerLink="/panier" routerLinkActive="router-link-active">Panier</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link"routerLink="/profil" routerLinkActive="router-link-active" >
+              Profil
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link disabled">Help</a>
+          </li>
+           <li>
+          <!-- <div class="combobox">
+            <select>
+            <option value="Select">Catégories</option>
+            <option value="php">Vêtements</option>
+            <option value="html">Fourniture</option>
+            <option value="javascript">Electronics</option>
+            <option value="CPP">CPP</option>
+            <option value="Python">Python</option>
+            <option value="vue">Vue</option>
+          </select>
+            </div>
+            <style>
+              :root {--PANTONECOATED: #5075d0;}
+            select {
+              box-shadow: none;
+              flex: 1;  padding: 0 1.2em;  color: #fff;
+              background-color: var(--PANTONECOATED);
+              cursor: pointer;}
+
+            select::-ms-expand { display: none;}
+            .combobox {
+              position: relative;
+              display: flex;  width: 20em;  height: 3em;
+              border-radius: .25em;  overflow: hidden;
+              color:#fff;}
+
+            .combobox::after {
+              content: '\25BC';  position: absolute;
+              top: 0;  right: 0;  padding: 1em;
+              background-color: #b567c5;
+              transition: .25s all ease;
+              pointer-events: none;}
+
+            .combobox:hover::after {
+              color: #f39c12;
+            }
+
+            </style> -->
+
+        </li>
+        </ul>
+<!--
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success me-4" type="submit">Search</button>
+        </form> -->
+        <li class="nav-item me-2 ms-4" style="list-style: none;">
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="24px" height="24px" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve">
+            <g>
+              <path d="M12,12A6,6,0,1,0,6,6,6.006,6.006,0,0,0,12,12ZM12,2A4,4,0,1,1,8,6,4,4,0,0,1,12,2Z" fill="#ffffff" data-original="#000000"></path><path d="M12,14a9.01,9.01,0,0,0-9,9,1,1,0,0,0,2,0,7,7,0,0,1,14,0,1,1,0,0,0,2,0A9.01,9.01,0,0,0,12,14Z" fill="#ffffff" data-original="#000000"></path>
+          </g>
+        </svg>
+      </li>
+        <form class="d-flex" role="search">
+          <button class="btn btn-outline-success me-4" type="button" (click)="login()">login</button>
+        </form>
+        <li class="nav-item me-2 ms-4" style="list-style: none;">
+          <a routerLink="/panier" routerLinkActive="router-link-active"  class="btn btn-light rounded-circle d-flex justify-content-center align-items-center position-relative p-0" style="width: 50px; height: 50px;">
+            <span class="position-absolute end-0 badge rounded-pill bg-danger">
+                {{1}}
+                <span class="visually-hidden">Card</span>
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode" viewBox="0 0 24 24" width="24px" height="24px">
+              <path d="M23.608,17.013l-2.8-10.1A9.443,9.443,0,0,0,2.486,7.4L.321,17.14a2.5,2.5,0,0,0,2.441,3.042H6.905a5.285,5.285,0,0,0,10.154,0H21.2a2.5,2.5,0,0,0,2.409-3.169Zm-20.223.169,2.03-9.137a6.443,6.443,0,0,1,12.5-.326l2.628,9.463Z"/>
+            </svg>
+
+        </a>
+      </li>
+      <li class="nav-item me-2 ms-4" style="list-style: none;">
+        <a routerLink="/favoris" routerLinkActive="router-link-active"  class="btn btn-light rounded-circle d-flex justify-content-center align-items-center position-relative p-0" style="width: 50px; height: 50px;background-color: rgb(252, 212, 219);">
+          <span class="position-absolute end-0 badge rounded-pill bg-primary">
+              {{this.addS.favoris.length}}
+              <span class="visually-hidden">Card</span>
+          </span>
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="28" height="28" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve"><g>
+            <path d="M17.5.917a6.4,6.4,0,0,0-5.5,3.3A6.4,6.4,0,0,0,6.5.917,6.8,6.8,0,0,0,0,7.967c0,6.775,10.956,14.6,11.422,14.932l.578.409.578-.409C13.044,22.569,24,14.742,24,7.967A6.8,6.8,0,0,0,17.5.917Z" fill="#e10d0d" data-original="#000000"></path></g>
+          </svg>
+      </a>
+    </li>
+        <li class="nav-item me-2 ms-4" style="list-style: none;">
+            <a routerLink="/panier" routerLinkActive="router-link-active"  class="btn btn-warning rounded-circle d-flex justify-content-center align-items-center position-relative p-0" style="width: 50px; height: 50px;">
+              <span class="position-absolute end-0 badge rounded-pill bg-danger">
+                  {{this.addS.panier.length}}
+                  <span class="visually-hidden">Card</span>
+              </span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+                  <path d="M4.4160156 1.9960938L1.0039062 2.0136719L1.0136719 4.0136719L3.0839844 4.0039062L6.3789062 11.908203L5.1816406 13.822266C4.3432852 15.161017 5.3626785 17 6.9414062 17L19 17L19 15L6.9414062 15C6.8301342 15 6.8173041 14.978071 6.8769531 14.882812L8.0527344 13L15.521484 13C16.247484 13 16.917531 12.605703 17.269531 11.970703L20.871094 5.484375C21.242094 4.818375 20.760047 4 19.998047 4L5.25 4L4.4160156 1.9960938 z M 7 18 A 2 2 0 0 0 5 20 A 2 2 0 0 0 7 22 A 2 2 0 0 0 9 20 A 2 2 0 0 0 7 18 z M 17 18 A 2 2 0 0 0 15 20 A 2 2 0 0 0 17 22 A 2 2 0 0 0 19 20 A 2 2 0 0 0 17 18 z" />
+              </svg>
+          </a>
+        </li>
+
+      </div>
+    </div>
+  </nav>
+
