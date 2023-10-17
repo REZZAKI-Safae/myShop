@@ -1,0 +1,30 @@
+# Set the default behavior for text files
+* text=auto
+
+# Specify files that should always be treated as binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.zip binary
+*.tar binary
+
+# Specify files that should always be treated as text
+*.ts text
+*.html text
+*.css text
+*.json text
+*.xml text
+
+# Ignore Angular-specific files and directories
+node_modules/ linguist-vendored
+dist/ linguist-vendored
+.e2e/ linguist-vendored
+
+# Ignore temporary files
+*.swp linguist-vendored
+*.log linguist-vendored
+
+# Specify merge strategies for specific files
+# For example, use "union" strategy for .xml files
+*.xml merge=union
